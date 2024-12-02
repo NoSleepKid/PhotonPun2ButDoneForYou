@@ -42,7 +42,10 @@ Forget hours of tinkering; we've done the work so you can just plug, play, and c
   - **VR Rig Left, Right Hand, and Head Tags** to match your tags.  
     ![Tag Variables](https://github.com/user-attachments/assets/31343e0b-25b6-4e77-9733-554eb20e969c)  
   - Want to connect to a lobby on start? Flip that toggle like a pro.  
-    ![Lobby Connect on Start](https://github.com/user-attachments/assets/283e7b1d-0973-4016-a784-9688f627b75e)  
+    ![Lobby Connect on Start](https://github.com/user-attachments/assets/283e7b1d-0973-4016-a784-9688f627b75e)
+  - And select your region.
+  - ![image](https://github.com/user-attachments/assets/78d1cbc8-dea9-4a78-9226-14a01b2f6846)
+
 
 ### 3. Callback Central 📞  
 - Assign callbacks for when players join or leave.  
