@@ -84,19 +84,19 @@ You’ve set up Photon-powered multiplayer like a legend. Time to dominate the v
 The **PhotonManager** class has a singleton called `instance`—because we know you love shortcuts.  
 
 ### **The Handy Functions:**  
-1. **`ConnectToPhoton()`**  
+1. **`ConnectToPhoton()` 1.0+**  
    - Easy-peasy function to connect to a lobby.  
 
-2. **`SetUsername(string username)`**  
+2. **`SetUsername(string username)` 1.0+**  
    - Sets your username. *(Be nice, no weird names.)*  
 
-3. **`Disconnect()`**  
+3. **`Disconnect()` 1.0+**  
    - Logs you out of the lobby. (Don’t rage quit. It’s not cool.)  
 
-4. **`DestroyPlayerVisual()`**  
+4. **`DestroyPlayerVisual()` 1.0+**  
    - Poof! Makes your player visual disappear. Perfect for when you want to be stealthy or just invisible.  
 
-5. **`SpawnPlayerVisual()`**  
+5. **`SpawnPlayerVisual()` 1.0+**  
    - Brings your player visual back. (Because, obviously, you’re the star of the show.)  
 
 ---
