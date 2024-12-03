@@ -1,114 +1,101 @@
-# PhotonPun2ButDoneForYou 🎮🚀  
-**The ultimate VR multiplayer package for Photon Pun 2, pre-programmed for your convenience.**  
-Forget hours of tinkering; we've done the work so you can just plug, play, and crush it in VR.  
-*(Disclaimer: Steve from accounting may still break it.)*  
+# PhotonPun2ButDoneForYou  
+
+**The VR multiplayer package for Photon Pun 2. Pre-configured so you can focus on your game.**  
 
 ---
 
-## **How to Set Up (a.k.a., The Fun Part)**  
+## **How to Set Up**  
 
-### 1. Install the Magic 🎩  
-- Download the latest `.unitypackage` file and install it.  
-  ![Installation Instructions](https://github.com/user-attachments/assets/fe394525-2b71-44c9-aa80-31c26ddf54a0)  
-  *(Yes, it’s as easy as it looks—you're welcome.)*  
+### 1. Install the Package  
+- Download the `.unitypackage` file and import it into your Unity project.  
 
-### 2. Photon Pun 2: The Power Source ⚡  
-- Install **Photon Pun 2 Free** via Unity Package Manager or the Asset Store.  
-  ![Photon Pun 2 on Asset Store](https://github.com/user-attachments/assets/a76565f8-95a4-45f7-a0cc-09e8709bb8f7)  
-  *(No Pun, no fun. Seriously.)*  
+### 2. Install Photon Pun 2  
+- Add **Photon Pun 2 Free** via the Unity Package Manager or Asset Store.  
 
-### 3. Set Up Your Photon App 🌐  
-- Go to the Photon Pun 2 Dashboard and create a new app:  
-  - **Settings:** Multiplayer Game  
+### 3. Set Up Your Photon App  
+- Go to the Photon Dashboard and create a new app:  
+  - **Type:** Multiplayer  
   - **Photon SDK:** PUN  
-- Grab that shiny App ID like it’s a rare Pokémon.  
+- Copy your App ID.  
 
-### 4. Wizardry 🧙‍♂️  
+### 4. Connect to Photon  
 - In Unity, go to **Window > Photon Unity Networking > Pun Wizard**.  
-- Click **Setup Project**, paste in your App ID, and boom—you’re connected!  
-  ![Pun Wizard Setup](https://github.com/user-attachments/assets/88ed507d-75cb-4558-9d3f-f0212ef628f3)  
-  *(Magic? More like logic. But still, pat yourself on the back.)*  
+- Paste your App ID into the wizard to connect.  
 
 ---
 
-## **Customizing Your VR Rig 🕶️✋**  
+## **Customizing Your VR Rig**  
 
-### 1. Tag All the Things  
-- Set your VR rig's **left hand**, **right hand**, and **head objects** to your desired tags.  
+### 1. Assign Tags  
+- Add tags to your VR rig's **head**, **left hand**, and **right hand**.  
 
-### 2. Photon Manager Is Your New Best Friend  
-- Drag the **Photon Manager prefab** from `Assets/PhotonButDoneForYou` into your scene.  
-- Update these settings:  
-  - **VR Rig Left, Right Hand, and Head Tags** to match your tags.  
-    ![Tag Variables](https://github.com/user-attachments/assets/31343e0b-25b6-4e77-9733-554eb20e969c)  
-  - Want to connect to a lobby on start? Flip that toggle like a pro.  
-    ![Lobby Connect on Start](https://github.com/user-attachments/assets/283e7b1d-0973-4016-a784-9688f627b75e)
-  - And select your region if you are on v1.1+
-    ![image](https://github.com/user-attachments/assets/29f8c5ce-3534-4fa2-a74c-c67ab537a4fa)
-
-
-
-### 3. Callback Central 📞  
-- Assign callbacks for when players join or leave.  
-  *(Yes, even Steve. Sigh.)*  
+### 2. Use PhotonManager  
+- Drag the **PhotonManager prefab** into your scene.  
+- Configure:  
+  - VR rig tags (head, hands).  
+  - Auto-connect to the lobby (optional).  
+  - Region settings for v1.1+.  
 
 ---
 
-## **The Player Prefab Zone 🧍‍♂️🔧**  
+## **Player Prefab**  
 
-1. Navigate to `Assets/Resources/PhotonButDoneForYou`.  
-2. Open the **Player Visual Prefab** and get customizing:  
+1. Open the **Player Visual Prefab** in `Assets/Resources/PhotonButDoneForYou`.  
+2. Customize as needed:  
    - Adjust rotation offsets.  
-   - Swap out the player model. Make it a dragon, robot, or even a dancing banana. Go wild.  
+   - Replace the default player model.  
 
-**Pro Tip:**  
-If your player model acts like a diva and won’t sync across platforms, enable:  
-`Sync Rig Using RPC`.  
-![Sync Rig Using RPC](https://github.com/user-attachments/assets/04003c1b-473f-44b4-9329-db31316e2182)  
+**Tip:**  
+If your rig doesn’t sync correctly, enable `Sync Rig Using RPC` in the prefab settings.  
 
 ---
 
-## **Final Adjustments 🛠️**  
+## **New Features in v1.1**  
 
-- Is your username clipping through your VR headset?  
-  Fix it by tweaking the **Text Vertical Offset** in the Player Visual Prefab.  
-  ![Text Vertical Offset](https://github.com/user-attachments/assets/1a9252e7-7b72-440b-bb86-6ce21c5d56e2)  
-
----
-
-## **You're Done! 🎉**  
-Congratulations, VR Master!  
-You’ve set up Photon-powered multiplayer like a legend. Time to dominate the virtual world.  
+- **KickPlayer(Player player):** Remove a player from the room.  
+- **BanPlayer(Player player):** Kick and block a player from rejoining.  
 
 ---
 
-## **EZ API & Tips (PhotonManager Edition)** 📚💡  
+## **Known Issues**  
 
-### **Meet the Singleton:**  
-The **PhotonManager** class has a singleton called `instance`—because we know you love shortcuts.  
-
-### **The Handy Functions:**  
-1. **`ConnectToPhoton()` v1.0+**  
-   - Easy-peasy function to connect to a lobby.  
-
-2. **`SetUsername(string username)` v1.0+**  
-   - Sets your username. *(Be nice, no weird names.)*  
-
-3. **`Disconnect()` v1.0+**  
-   - Logs you out of the lobby. (Don’t rage quit. It’s not cool.)  
-
-4. **`DestroyPlayerVisual()` v1.0+**  
-   - Poof! Makes your player visual disappear. Perfect for when you want to be stealthy or just invisible.  
-
-5. **`SpawnPlayerVisual()` v1.0+**  
-   - Brings your player visual back. (Because, obviously, you’re the star of the show.)  
-
-6. **`KickPlayer(Player player)` v1.1+**
-   - Forcfully kicks a player out of the room. (But don't get too mad at sombody!)
-
-7. **`BanPlayer(Player player)` v1.1+**
-   - Kicks the player and blocks them from joining that instance again.
+- Username text might clip through VR headsets. Adjust the **Text Vertical Offset** in the Player Visual Prefab.  
 
 ---
 
-Now go forth, conquer VR multiplayer, and remember: Steve from accounting is still probably gonna break something. 😉
+## **PhotonManager API**  
+
+1. **`ConnectToPhoton()`**  
+   Connects to Photon servers.  
+
+2. **`SetUsername(string username)`**  
+   Sets the player's username.  
+
+3. **`Disconnect()`**  
+   Disconnects from Photon.  
+
+4. **`DestroyPlayerVisual()`**  
+   Removes the local player’s visual representation.  
+
+5. **`SpawnPlayerVisual()`**  
+   Spawns the player’s visual in the scene.  
+
+6. **`KickPlayer(Player player)`**  
+   Removes a player from the room.  
+
+7. **`BanPlayer(Player player)`**  
+   Bans a player from rejoining the room.  
+
+---
+
+## **FAQ**  
+
+1. **Can regions communicate with each other?**  
+   - No, regions are isolated.  
+
+2. **Can I use this for non-VR multiplayer?**  
+   - Yes, but it’s optimized for VR rigs.  
+
+---
+
+Now you're ready to create your multiplayer VR experience with PhotonPun2ButDoneForYou. Enjoy!
