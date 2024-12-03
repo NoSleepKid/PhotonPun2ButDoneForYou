@@ -60,30 +60,31 @@ If your rig doesn’t sync correctly, enable `Sync Rig Using RPC` in the prefab 
 ## **Known Issues**  
 
 - Username text might clip through VR headsets. Adjust the **Text Vertical Offset** in the Player Visual Prefab.  
+- If objects you have added in your Player Visual Prefab do NOT sync position, rotation, Or even scale, Please try using the `SyncRigUsingRPC` setting on the Player Visual Prefab to counteract this behaviour.
 
 ---
 
 ## **PhotonManager API**  
 
-1. **`ConnectToPhoton()`**  
+1. **`ConnectToPhoton()`**  v1.0
    Connects to Photon servers.  
 
-2. **`SetUsername(string username)`**  
+2. **`SetUsername(string username)`**  v1.0
    Sets the player's username.  
 
-3. **`Disconnect()`**  
+3. **`Disconnect()`**  v1.0
    Disconnects from Photon.  
 
-4. **`DestroyPlayerVisual()`**  
+4. **`DestroyPlayerVisual()`**  v1.0
    Removes the local player’s visual representation.  
 
-5. **`SpawnPlayerVisual()`**  
+5. **`SpawnPlayerVisual()`**  v1.0
    Spawns the player’s visual in the scene.  
 
-6. **`KickPlayer(Player player)`**  
+6. **`KickPlayer(Player player)`**  v1.1
    Removes a player from the room.  
 
-7. **`BanPlayer(Player player)`**  
+7. **`BanPlayer(Player player)`**  v1.1
    Bans a player from rejoining the room.  
 
 ---
