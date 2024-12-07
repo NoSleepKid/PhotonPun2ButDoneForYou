@@ -50,12 +50,6 @@ If your rig doesn’t sync correctly, enable `Sync Rig Using RPC` in the prefab 
 
 ---
 
-## **New Features in v1.1**  
-
-- **KickPlayer(Player player):** Remove a player from the room.  
-- **BanPlayer(Player player):** Kick and block a player from rejoining.  
-
----
 
 ## **Known Issues**  
 
