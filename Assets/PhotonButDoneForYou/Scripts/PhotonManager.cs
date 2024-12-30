@@ -11,7 +11,7 @@ public enum PhotonRegion
     US,          // USA East (Washington)
     USW,         // USA West (San Jose)
     CAE,         // Canada East (Montreal)
-    SA,          // South America (São Paulo)
+    SA,          // South America (SÃ£o Paulo)
     EU,          // Europe (Amsterdam)
     UK,          // United Kingdom (London)
     ASIA,        // Asia (Singapore)
